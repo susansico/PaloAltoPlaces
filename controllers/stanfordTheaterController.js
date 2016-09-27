@@ -30,7 +30,7 @@ app.controller("StanfordTheaterController", ["$scope", "HttpService", function($
 
                 console.log(classicMovieData);
 
-                var classicMovieCreditList = document.geElementById("ClassicMovieCreditList");
+                var classicMovieCreditList = document.getElementById("ClassicMovieCreditList");
                 classicMovieCreditList.style.display = "block";
                 $scope.classicMovieData.title = classicMovieData.Title;
                 console.log(classicMovieData.Title);
