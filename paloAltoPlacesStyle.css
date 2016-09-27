@@ -1,0 +1,196 @@
+/* plaoAltoPlacesStyleSheet.css */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font: 92%/1.5 Verdana, Arial, sans-serif;
+    color:  #FFF;
+    margin: 0 auto;
+    padding: 0;
+    background: #000;
+}
+
+nav {
+    margin: 25px 0 0 0;
+}
+
+li {
+    padding: 0;
+}
+
+a {
+    font: 17px Roboto, sans-serif;
+    color: #FFF;
+}
+
+main {
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+}
+
+span {
+    padding: 0 15px;
+}
+
+figCaption {
+    font: bold 11px Roboto, sans-serif;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+label {
+    font: 14px Roboto, sans-serif;
+}
+
+/* Ids */
+#HeaderHome {
+    font: 500 40px Tahoma, Geneva, serif;
+    text-shadow: #e5e5e5 2px 2px 2px;
+    margin: 20px 0 0 20px;
+    display: block;
+}
+
+#DateAndWeather {
+    margin: 35px 0 0 0;
+}
+
+#HeaderStanfordTheatre {
+    font: 500 25px Tahoma, Geneva, serif;
+    margin: 5px 0 0 20px;
+    display: block;
+}
+
+#StanfordTheatre {
+    margin: 30px 0 0 0 ;
+    border: 3px solid #0c0c0c;
+    border-radius: 5px;
+}
+
+#ClassicMovie {
+    width: 650px;
+    font: 16px Roboto, sans-serif;
+    margin: 5px 0 0 10px;
+}
+
+#ClassicMovieInput {
+    width: 50%;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.42857143;
+    color: #555;
+    margin: 0 0 0 10px;
+    padding: 0 3px 0 3px;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: inline;
+}
+
+#ClassicMovieInput:focus {
+    outline: none;
+    border: 2px solid #e5e5e5;
+    -webkit-box-shadow: 0 0 #FFF;
+    box-shadow: 0 0 10px #FFF;
+}
+
+#ClassicMovieInputButton {
+    width: 7%;
+    font: bold 18px Roboto, sans-serif;
+    margin: 0 0 0 5px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: #000;
+    outline: none;
+    display: inline;
+}
+
+#ClassicMovieInputButton:active {
+    color: #555;
+    text-shadow: #FFF 2px 2px 2px;
+}
+
+#ClassicMovieTitle {
+    font: 500 18px Tahoma, Geneva, serif;
+    text-shadow: #e5e5e5 1px 1px 1px;
+    margin: 10px 0 15px 0;
+    padding: 0;
+}
+
+#ClassicMoviePoster {
+    margin: 0;
+    padding: 0;
+}
+
+#ClassicMovieCreditList {
+    margin: 40px 0 0 0;
+    padding: 0;
+    background-color: #000;
+    /*left: -9999px;*/
+    position: relative;
+    display: none;
+}
+
+#ClassicMovieCreditListPlot,
+#ClassicMovieCreditListYear,
+#ClassicMovieCreditListDirector,
+#ClassicMovieCreditListWriters,
+#ClassicMovieCreditListStars {
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #FFF;
+    margin: 0;
+    padding: 5px 0 7px 5px;
+    background-color: #000;
+    border: none;
+    display: block;
+    list-style-type: none;
+    position: relative;
+}
+
+/* Classes */
+.nav>li>a:hover {
+    font-weight: bold;
+    color: #e5e5e5;
+    text-shadow: #FFF 1px 1px 1px;
+    background: #000;
+    border: none;
+    box-shadow: none;
+}
+
+.nav>li>a:focus {
+    font-weight: normal;
+    color: #FFF;
+    text-shadow: none;
+    background: #000;
+    border: none;
+    box-shadow: none;
+}
+
+.DateAndWeatherStyle {
+    font: 14px Roboto, serif;
+    display: inline;
+}
+
+.ClassicMovieCreditItem {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.CreditSpacing {
+    text-shadow: #e5e5e5 1px 1px 1px;
+    padding: 0 13px 0 0;
+}
+
+
+

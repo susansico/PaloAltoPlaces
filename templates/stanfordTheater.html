@@ -1,0 +1,64 @@
+<!-- stanfordTheatre.html -->
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <h3 id="HeaderStanfordTheatre">Stanford Theatre</h3>
+
+        <figure>
+
+            <img id="StanfordTheatre" class="img-responsive" src="../images/stanford-theater.jpg" style="width: 648px; height:
+            429px;">
+
+            <figCaption>The Stanford Theatre which opened in 1925 presents classical movies from Hollywood's Golden Age
+            .</figCaption>
+
+        </figure>
+
+    </div>
+
+    <div class="col-md-6 col-6-offset-6">
+
+        <div id="ClassicMovie">
+
+            <div class="form-group">
+
+                <label for="ClassicMovieInput">Classic Movie Title&#58; </label>
+                <input class="form-control" type="text" id="ClassicMovieInput" size="30"  placeholder="Gone with the Wind" ng-model="classicMovieInput">
+                <button id="ClassicMovieInputButton" type="button" ng-click="getClassicMovieData()">Go!</button>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h4 id="ClassicMovieTitle">{{classicMovieData.title}}</h4>
+
+                <img class="img-responsive" id="ClassicMoviePoster" src={{classicMovieData.poster}}>
+
+            </div>
+
+            <div class="col-md-6 col-6-offset-6">
+
+
+                <ul class="list-group" id="ClassicMovieCreditList">
+
+                    <li class="list-group-item" id="ClassicMovieCreditListPlot"><span class="ClassicMovieCreditItem">{{classicMovieData.plot}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListYear"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Year&#58</span>{{classicMovieData.year}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListDirector"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Director&#58;</span>{{classicMovieData.director}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListWriters"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Writers&#58;</span>{{classicMovieData.writer}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListStars"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Actors&#58;</span>{{classicMovieData.actors}}</span></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
