@@ -6,10 +6,9 @@
 
         <h3 id="HeaderStanfordTheatre">Stanford Theatre</h3>
 
-        <figure>
+        <figure                                                        >
 
-            <img id="StanfordTheatre" class="img-responsive" src="../images/stanford-theater.jpg" style="width: 648px; height:
-            429px;">
+            <img id="StanfordTheatre" class="img-responsive" src="../images/stanford-theater.jpg">
 
             <figCaption>The Stanford Theatre which opened in 1925 presents classical movies from Hollywood's Golden Age
             .</figCaption>
@@ -18,27 +17,27 @@
 
     </div>
 
-    <div class="col-md-6 col-6-offset-6">
+    <div class="col-md-6">
 
         <div id="ClassicMovie">
 
             <div class="form-group">
 
                 <label for="ClassicMovieInput">Classic Movie Title&#58; </label>
-                <input class="form-control" type="text" id="ClassicMovieInput" size="30"  placeholder="Gone with the Wind" ng-model="classicMovieInput">
+                <input class="form-control" type="text" id="ClassicMovieInput" size="30"  placeholder="e.g. Gone with the Wind"  ng-keyup="$event.keyCode === 13 ? getClassicMovieData() : null" ng-model="classicMovieInput">
                 <button id="ClassicMovieInputButton" type="button" ng-click="getClassicMovieData()">Go!</button>
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <h4 id="ClassicMovieTitle">{{classicMovieData.title}}</h4>
 
-                <img class="img-responsive" id="ClassicMoviePoster" src={{classicMovieData.poster}}>
+                <img class="img-responsive" id="ClassicMoviePoster" style="width: 250px;" ng-src="data:image/jpg;base64, {{classicMovieData.poster}}" alt="Classic Movie Poster" ng-show="classicMovieData.poster">
 
             </div>
 
-            <div class="col-md-6 col-6-offset-6">
+            <div class="col-md-7">
 
 
                 <ul class="list-group" id="ClassicMovieCreditList">
@@ -52,6 +51,14 @@
                     <li class="list-group-item" id="ClassicMovieCreditListWriters"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Writers&#58;</span>{{classicMovieData.writer}}</span></li>
 
                     <li class="list-group-item" id="ClassicMovieCreditListStars"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Actors&#58;</span>{{classicMovieData.actors}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListRuntime"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Runtime&#58;</span>{{classicMovieData.runtime}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListGenre"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Genre&#58;</span>{{classicMovieData.genre}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListImdbRating"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Imdb Rating&#58;</span>{{classicMovieData.imdbRating}}</span></li>
+
+                    <li class="list-group-item" id="ClassicMovieCreditListRated"><span class="ClassicMovieCreditItem"><span class="CreditSpacing">Rated&#58;</span>{{classicMovieData.rated}}</span></li>
 
                 </ul>
 
