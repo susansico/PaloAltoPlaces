@@ -1,5 +1,6 @@
-/* plaoAltoPlacesStyleSheet.css */
+/* paloAltoPlacesStyleSheet.css */
 
+/* Tags */
 html {
     height: 100%;
 }
@@ -37,8 +38,13 @@ span {
     padding: 0 15px;
 }
 
+figure {
+    margin: 8% 0 0 0;
+}
+
 figCaption {
     font: bold 11px Roboto, sans-serif;
+    line-height: 1.7em;
     text-align: center;
     margin: 10px 0 0 0;
 }
@@ -46,6 +52,7 @@ figCaption {
 label {
     font: 14px Roboto, sans-serif;
 }
+
 
 /* Ids */
 #HeaderHome {
@@ -55,8 +62,14 @@ label {
     display: block;
 }
 
+#HewlettPackardImage {
+    margin-top: 100px;
+    border: 1px solid #283d3d;
+    border-radius: 5px;
+}
+
 #DateAndWeather {
-    margin: 35px 0 0 0;
+    margin: 35px 0 0 30px;
 }
 
 #HeaderStanfordTheatre {
@@ -126,6 +139,7 @@ label {
 }
 
 #ClassicMoviePoster {
+    width: 600px;
     margin: 0;
     padding: 0;
 }
@@ -143,7 +157,11 @@ label {
 #ClassicMovieCreditListYear,
 #ClassicMovieCreditListDirector,
 #ClassicMovieCreditListWriters,
-#ClassicMovieCreditListStars {
+#ClassicMovieCreditListStars,
+#ClassicMovieCreditListRuntime,
+#ClassicMovieCreditListGenre,
+#ClassicMovieCreditListImdbRating,
+#ClassicMovieCreditListRated {
     font-size: 12px;
     line-height: 1.42857143;
     color: #FFF;
@@ -155,6 +173,7 @@ label {
     list-style-type: none;
     position: relative;
 }
+
 
 /* Classes */
 .nav>li>a:hover {
