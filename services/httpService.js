@@ -12,25 +12,43 @@ app.service("HttpService", function($http) {
 
             .then(function(weatherResponse) {
 
-                console.log(weatherResponse);
                 return weatherResponse.data;
             })
     };
 
     this.getClassicMovie = function(titleUrl) {
 
-        //http://www.omdbapi.com/?t=Gone+with+the+Wind&y=&plot=short&r=json
-        var classicMovieDataUrl = "http://www.omdbapi.com/?t=" + titleUrl + "&y=&plot=short&r=json";
-        console.log(classicMovieDataUrl);
+        var classicMovieDataUrl = "http://www.omdbapi.com/?t=" + titleUrl + "&y=&plot=short&r=json&apikey=9118e89c";
 
         return $http.get(classicMovieDataUrl)
 
             .then(function(classicMovieResponse) {
 
-                console.log(classicMovieResponse.data);
-                return classicMovieResponse.data;
+                var classicMovieImdbID;
+                var classicMoviePosterURL;
+
+                self.classicMovieData = classicMovieResponse.data;
+                classicMovieImdbID = classicMovieResponse.data.imdbID;
+                classicMoviePosterURL = "http://img.omdbapi.com/?i=" + classicMovieImdbID + "&h=600&apikey=9118e89c";
+
+                return $http({method: "GET", url: classicMoviePosterURL, responseType: "arraybuffer"});
+            })
+
+            .then(function (classicMovieResponse) {
+
+                var posterImageByteArray;
+                var posterImageByteString = "";
+
+                posterImageByteArray = new Uint8Array(classicMovieResponse.data);
+
+                for(var i = 0; i < posterImageByteArray.byteLength ; i++) {
+
+                    posterImageByteString += String.fromCharCode(posterImageByteArray[i]);
+
+                }
+
+                self.classicMovieData.Poster = window.btoa(posterImageByteString);
+                return self.classicMovieData;
             })
     };
-
-
 });
